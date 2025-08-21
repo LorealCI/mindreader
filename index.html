@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Reader Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 MIND READER</h1>
+        <input type="number" id="userNumber" placeholder="Enter a number">
+        <button onclick="startReading()">Read My Mind</button>
+
+        <div id="loadingSection" class="hidden">
+        <div class="loading-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+        <p id="loadingText">Initializing mind link...</p>
+        </div>
+   </div>
+    <div id="resultSection" class="hidden">
+        <p id="resultText"></p>
+        <button onclick="resetGame()">Play Again</button>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

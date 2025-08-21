@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loading-bar {
+  width: 100%;
+  background-color: #ccc;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+
+#loadingText {
+  margin-top: 10px;
+  font-style: italic;
+  animation: fadeInOut 1.4s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 1; }
+}
+
+
+.hidden {
+  display: none;
+}
