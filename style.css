@@ -14,6 +14,19 @@ input {
   padding: 10px;
   width: 80%;
   margin-bottom: 15px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  animation: flashBorder 2s infinite;
+}
+
+@keyframes flashBorder {
+  0% { border-color: #ff6b6b; }
+  16.66% { border-color: #4ecdc4; }
+  33.33% { border-color: #45b7d1; }
+  50% { border-color: #96ceb4; }
+  66.66% { border-color: #feca57; }
+  83.33% { border-color: #ff9ff3; }
+  100% { border-color: #ff6b6b; }
 }
 
 button {
@@ -53,4 +66,37 @@ button {
 
 .hidden {
   display: none;
+}
+
+/* Firework container and particles */
+.firework {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 1000;
+}
+
+.firework-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: firework-explosion 1.5s ease-out forwards;
+}
+
+@keyframes firework-explosion {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
 }
